@@ -19,7 +19,7 @@ class TroopsSpec extends org.specs2.mutable.Specification {
   private[this] val retHelloWorld: Response[IO] = {
     val getHW = Request[IO](Method.GET, uri"/hello/world")
     val helloWorld = Troops.impl[IO]
-    TroopsRoutes.helloWorldRoutes(helloWorld).orNotFound(getHW).unsafeRunSync()
+    TroopsRoutes.routes(helloWorld).orNotFound(getHW).unsafeRunSync()
   }
 
   private[this] def uriReturns200(): MatchResult[Status] =
