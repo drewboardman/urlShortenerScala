@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1014e259-946e-49ba-89dc-8fb6c43df7c1" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1SXJtPZlhjwqkKEjvQK1hYBoZER" />
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="troops" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="root [file:/home/drew/code/troops/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="troops-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/build.sbt" value="4008759235" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="1396028727" />
+        <entry key="$PROJECT_DIR$/project/plugins.sbt" value="717338565" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Downloads/akka-samples-main-scala" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/reactive-maps" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../backend-interview" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../foodlogger" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../fs2-chat" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../hello-scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../http4s_tutorial" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../netsuite_restlets" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../netsuite_restlets/clients/scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../newchallenge/scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../preferences-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../radial-integration" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../rewardsnetwork" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/akka-http-quickstart-scala" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/akka-quickstart-scala" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/akka_example/akka-quickstart-scala" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/fpmortalz" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/redbook" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/sherpa-evolved" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1014e259-946e-49ba-89dc-8fb6c43df7c1" name="Default Changelist" comment="" />
+      <created>1571704220921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571704220921</updated>
+    </task>
+    <servers />
+  </component>
+</project>
