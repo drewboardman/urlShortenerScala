@@ -23,9 +23,9 @@ object TroopsRoutes {
     val dsl = new Http4sDsl[F] {}
     import dsl._
     HttpRoutes.of[F] {
-      case GET -> Root / "hello" / name =>
+      case GET -> Root / "minify" / longUrl =>
         for {
-          greeting <- H.hello(Troops.Name(name))
+          greeting <- H.minify(Troops.Name(longUrl))
           resp <- Ok(greeting)
         } yield resp
     }
