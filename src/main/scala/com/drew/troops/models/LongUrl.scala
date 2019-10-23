@@ -1,3 +1,3 @@
 package com.drew.troops.models
 
-case class LongUrl(url: String, hits: Int)
+case class LongUrl(url: String) extends AnyVal

@@ -14,8 +14,8 @@ object TroopsRoutes {
     HttpRoutes.of[F] {
       case GET -> Root / "minify" / longUrlStr =>
         for {
-          greeting <- Troops[F].minify(LongUrl(longUrlStr))
-          resp <- Ok(greeting)
+          shortUrl <- Troops[F].minify(LongUrl(longUrlStr))
+          resp     <- Ok(shortUrl.url)
         } yield resp
     }
   }

@@ -1,8 +1,8 @@
 package com.drew.troops.dao
 
-import com.drew.troops.models.{LongUrl, ShortUrl, UrlId}
+import com.drew.troops.models.{ LongUrl, Record, UrlId }
 
 trait TroopsDao[F[_]] {
-  def updateHits(id: UrlId): F[Either[String, Unit]]
-  def getOrAdd(longUrl: LongUrl): F[UrlId]
+  def getAndUpdateHits(id: UrlId): F[Either[String, Record]]
+  def add(longUrl: LongUrl): F[UrlId]
 }
