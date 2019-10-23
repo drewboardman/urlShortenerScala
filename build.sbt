@@ -16,19 +16,7 @@ lazy val root = (project in file("."))
       "org.http4s" %% "http4s-dsl" % Http4sVersion,
       "io.circe" %% "circe-generic" % CirceVersion,
       "org.specs2" %% "specs2-core" % Specs2Version % "test",
-      "ch.qos.logback" % "logback-classic" % LogbackVersion,
-
-      // Start with this one
-      "org.tpolecat" %% "doobie-core" % "0.8.4",
-
-      // And add any of these as needed
-      "org.tpolecat" %% "doobie-h2" % "0.8.4", // H2 driver 1.4.199 + type mappings.
-      "org.tpolecat" %% "doobie-hikari" % "0.8.4", // HikariCP transactor.
-      "org.tpolecat" %% "doobie-postgres" % "0.8.4", // Postgres driver 42.2.8 + type mappings.
-      "org.tpolecat" %% "doobie-quill" % "0.8.4", // Support for Quill 3.4.9
-      "org.tpolecat" %% "doobie-specs2" % "0.8.4" % "test", // Specs2 support for typechecking statements.
-      "org.tpolecat" %% "doobie-scalatest" % "0.8.4" % "test" // ScalaTest support for typechecking statements.
-
+      "ch.qos.logback" % "logback-classic" % LogbackVersion
     ),
     addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.10.3"),
     addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.0")

@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/drew/code/troops/src/main/scala/com/drew/troops/TroopsServer.scala:3:39: Unused import[0m
-[0m[[0m[31merror[0m] [0m[0mimport cats.effect.{ConcurrentEffect, ContextShift, Timer}[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
