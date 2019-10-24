@@ -9,7 +9,7 @@ import scala.collection.mutable
 class InMemoryDaoTest extends WordSpec with Matchers {
   "add" should {
     "add new entries" in {
-      val dao            = new InMemoryDao(mutable.HashMap[UrlId, Record]().empty)
+      val dao            = new InMemoryDao[IO](mutable.HashMap[UrlId, Record]().empty)
       val res: IO[UrlId] = dao.add(LongUrl("www.google.com"))
       res.unsafeRunSync() should be(UrlId(1))
 
@@ -18,7 +18,7 @@ class InMemoryDaoTest extends WordSpec with Matchers {
     }
 
     "not double add the same url" in {
-      val dao            = new InMemoryDao(mutable.HashMap[UrlId, Record]().empty)
+      val dao            = new InMemoryDao[IO](mutable.HashMap[UrlId, Record]().empty)
       val res: IO[UrlId] = dao.add(LongUrl("www.netflix.com"))
       res.unsafeRunSync() should be(UrlId(1))
 
@@ -29,7 +29,7 @@ class InMemoryDaoTest extends WordSpec with Matchers {
 
   "getAndUpdateHits" should {
     "return the associated long url" in {
-      val dao = new InMemoryDao(
+      val dao = new InMemoryDao[IO](
         mutable.HashMap[UrlId, Record](
           (UrlId(1) -> Record(LongUrl("www.bing.com"), 0))
         )
