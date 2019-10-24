@@ -1,6 +1,7 @@
 package com.drew.troops.dao
 
-import cats.effect.IO
+import cats.effect.Sync
+import cats.implicits._
 import com.drew.troops.models.{ LongUrl, Record, UrlId }
 import com.drew.troops.util.RichHashMap._
 
@@ -12,9 +13,9 @@ import scala.collection.mutable
   *
   * @param db: passed in for ease of testing
   */
-class InMemoryTroopsDao(db: mutable.HashMap[UrlId, Record]) extends TroopsDao[IO] {
+class InMemoryDao[F[_]: Sync](db: mutable.HashMap[UrlId, Record]) extends Dao[F] {
 
-  override def add(longUrl: LongUrl): IO[UrlId] = getId(longUrl).map {
+  override def add(longUrl: LongUrl): F[UrlId] = getId(longUrl).map {
     case Some(urlId) => urlId
     case None =>
       val newId = db.nextId
@@ -22,10 +23,10 @@ class InMemoryTroopsDao(db: mutable.HashMap[UrlId, Record]) extends TroopsDao[IO
       newId
   }
 
-  private def getId(longUrl: LongUrl): IO[Option[UrlId]] =
-    IO(db.find(_._2.longUrl == longUrl).map(_._1))
+  private def getId(longUrl: LongUrl): F[Option[UrlId]] =
+    Sync[F].delay(db.find(_._2.longUrl == longUrl).map(_._1))
 
-  override def getAndUpdateHits(id: UrlId): IO[Either[String, Record]] =
+  override def getAndUpdateHits(id: UrlId): F[Either[String, Record]] =
     get(id).map {
       case Some(record) =>
         val newRecord = record.copy(hits = record.hits + 1)
@@ -35,5 +36,5 @@ class InMemoryTroopsDao(db: mutable.HashMap[UrlId, Record]) extends TroopsDao[IO
         Left("url not found in db")
     }
 
-  private def get(id: UrlId): IO[Option[Record]] = IO(db.get(id))
+  private def get(id: UrlId): F[Option[Record]] = Sync[F].delay(db.get(id))
 }

@@ -2,14 +2,14 @@ package com.drew.troops
 
 import cats.effect.Sync
 import cats.implicits._
-import com.drew.troops.dao.TroopsDao
+import com.drew.troops.dao.Dao
 import com.drew.troops.models.LongUrl
 import org.http4s.HttpRoutes
 import org.http4s.dsl.Http4sDsl
 
 object TroopsRoutes {
 
-  def routes[F[_]: Sync](implicit troopsInstance: Troops[F], dao: TroopsDao[F]): HttpRoutes[F] = {
+  def routes[F[_]: Sync](implicit troopsInstance: Troops[F], dao: Dao[F]): HttpRoutes[F] = {
     val dsl = new Http4sDsl[F] {}
     import dsl._
     HttpRoutes.of[F] {

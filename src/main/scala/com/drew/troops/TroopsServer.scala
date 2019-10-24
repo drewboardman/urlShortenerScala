@@ -1,7 +1,7 @@
 package com.drew.troops
 
 import cats.effect.{ ConcurrentEffect, Timer }
-import com.drew.troops.dao.TroopsDao
+import com.drew.troops.dao.Dao
 import fs2.Stream
 import org.http4s.implicits._
 import org.http4s.server.blaze.BlazeServerBuilder
@@ -9,7 +9,7 @@ import org.http4s.server.middleware.Logger
 
 object TroopsServer {
 
-  def stream[F[_]: ConcurrentEffect](implicit T: Timer[F], dao: TroopsDao[F]): Stream[F, Nothing] = {
+  def stream[F[_]: ConcurrentEffect](implicit T: Timer[F], dao: Dao[F]): Stream[F, Nothing] = {
     implicit val troopsAlg: Troops[F] = Troops.impl[F]
 
     for {
