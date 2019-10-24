@@ -6,6 +6,12 @@ import com.drew.troops.util.RichHashMap._
 
 import scala.collection.mutable
 
+/**
+  * This is just a simple, in-memory implementation for the purposes of the coding challenge.
+  * In a real application, you'd want to use a real db.
+  *
+  * @param db: passed in for ease of testing
+  */
 class InMemoryTroopsDao(db: mutable.HashMap[UrlId, Record]) extends TroopsDao[IO] {
 
   override def add(longUrl: LongUrl): IO[UrlId] = getId(longUrl).map {
