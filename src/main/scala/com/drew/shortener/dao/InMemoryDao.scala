@@ -8,8 +8,7 @@ import com.drew.shortener.util.RichHashMap._
 import scala.collection.mutable
 
 /**
-  * This is just a simple, in-memory implementation for the purposes of the coding challenge.
-  * In a real application, you'd want to use a real db.
+  * This is just a simple, in-memory implementation. In a real application, you'd want to use a real db.
   *
   * @param db : passed in for ease of testing
   */
