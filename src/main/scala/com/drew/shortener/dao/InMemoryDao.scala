@@ -1,19 +1,22 @@
-package com.drew.troops.dao
+package com.drew.shortener.dao
 
 import cats.effect.Sync
 import cats.implicits._
-import com.drew.troops.models.{LongUrl, Record, UrlId}
-import com.drew.troops.util.RichHashMap._
+import com.drew.shortener.models.{ LongUrl, Record, UrlId }
+import com.drew.shortener.util.RichHashMap._
 
 import scala.collection.mutable
 
 /**
- * This is just a simple, in-memory implementation for the purposes of the coding challenge.
- * In a real application, you'd want to use a real db.
- *
- * @param db : passed in for ease of testing
- */
-class InMemoryDao[F[_] : Sync](db: mutable.HashMap[UrlId, Record], keyRandomizer: (List[String] => String)) extends Dao[F] {
+  * This is just a simple, in-memory implementation for the purposes of the coding challenge.
+  * In a real application, you'd want to use a real db.
+  *
+  * @param db : passed in for ease of testing
+  */
+class InMemoryDao[F[_]: Sync](
+  db: mutable.HashMap[UrlId, Record],
+  keyRandomizer: (List[String] => String)
+) extends Dao[F] {
 
   override def add(longUrl: LongUrl): F[UrlId] = getId(longUrl).map {
     case Some(urlId) => urlId

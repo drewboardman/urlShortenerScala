@@ -1,10 +1,10 @@
-package com.drew.troops
+package com.drew.shortener
 
-import cats.effect.{ExitCode, IO, IOApp}
+import cats.effect.{ ExitCode, IO, IOApp }
 import cats.implicits._
-import com.drew.troops.dao.InMemoryDao
-import com.drew.troops.models.{Record, UrlId}
-import com.drew.troops.util.Randomizer
+import com.drew.shortener.dao.InMemoryDao
+import com.drew.shortener.models.{ Record, UrlId }
+import com.drew.shortener.util.Randomizer
 
 import scala.collection.mutable
 
@@ -14,6 +14,6 @@ object Main extends IOApp {
       mutable.HashMap[UrlId, Record]().empty,
       Randomizer.uniqueStr // <-- abstract over the randomizer to allow for testability
     )
-    TroopsServer.stream[IO].compile.drain.as(ExitCode.Success)
+    Server.stream[IO].compile.drain.as(ExitCode.Success)
   }
 }

@@ -1,8 +1,8 @@
-package com.drew.troops.dao
+package com.drew.shortener.dao
 
 import cats.effect.IO
-import com.drew.troops.models._
-import org.scalatest.{Matchers, WordSpec}
+import com.drew.shortener.models._
+import org.scalatest.{ Matchers, WordSpec }
 
 import scala.collection.mutable
 

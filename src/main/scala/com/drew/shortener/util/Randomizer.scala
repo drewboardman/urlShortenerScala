@@ -1,4 +1,4 @@
-package com.drew.troops.util
+package com.drew.shortener.util
 
 object Randomizer {
 

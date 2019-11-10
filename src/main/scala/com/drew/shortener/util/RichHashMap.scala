@@ -1,6 +1,6 @@
-package com.drew.troops.util
+package com.drew.shortener.util
 
-import com.drew.troops.models.{Record, UrlId}
+import com.drew.shortener.models.{ Record, UrlId }
 
 import scala.collection.mutable
 

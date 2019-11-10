@@ -18,9 +18,9 @@ $ sbt run
 
 # open another shell
 $ curl localhost:8080/minify/"www.bing.com"
-troops.ai/qG9ncr%
+drew.io/qG9ncr%
 
-$ curl localhost:8080/expand/"troops.ai%2FqG9ncr"  # replace / with %2F
+$ curl localhost:8080/expand/"drew.io%2FqG9ncr"  # replace / with %2F
 www.bing.com%
 
 $ curl localhost:8080/expand/"nonsense"

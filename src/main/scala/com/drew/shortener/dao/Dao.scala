@@ -1,6 +1,6 @@
-package com.drew.troops.dao
+package com.drew.shortener.dao
 
-import com.drew.troops.models.{ LongUrl, Record, UrlId }
+import com.drew.shortener.models.{ LongUrl, Record, UrlId }
 
 trait Dao[F[_]] {
   def getAndUpdateHits(id: UrlId): F[Either[String, Record]]
